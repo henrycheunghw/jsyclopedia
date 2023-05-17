@@ -1,0 +1,172 @@
+<!-- Student Name: Hoi Wing Henry Cheung
+Student Number: A01313771
+Course Number: MDIA 2294 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the website title as "JScyclopedia" -->
+    <title>JSyclopedia</title>
+    <!-- Add Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <!-- Add reset CSS stylesheet to remove or reset the default styles applied by web browsers to HTML elements -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Add main CSS stylesheet to set up most of the styling for the webpage -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Add Lightbox CSS stylesheet -->
+	<link rel="stylesheet" href="css/lightbox.css">
+    <!-- 
+        Add Lightbox CSS stylesheet
+        Source: https://lokeshdhakar.com/projects/lightbox2/
+     -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Create the header which will be displayed on all 3 pages -->
+    <header id="site-header">
+        <!-- Use a container to contain the header content -->
+        <div class="container">
+            <div class="flex">
+                <!-- Create a logo-->
+                <div class="site-header__logo">
+                    <!-- Use CSS to increase the font size of "JS" to emphasize that the website name means "encyclopedia of JavaScript" -->
+                    <h2><span class="large-font">JS</span>yclopedia</h2>
+                </div>
+                <!-- Create the navigation menu linking 3 pages together -->
+                <nav class="site-header__menu js-menu">
+                    <ul class="">
+                        <div class="flex">
+                            <!-- Create the the JavaScript Concepts page -->
+                            <li><a href="index.html">JavaScript</a></li>
+                            <!-- Create the jQuery Concepts page -->
+                            <li><a href="jquery.html">jQuery</a></li>
+                            <!-- Create the Plug-ins page -->
+                            <li><a href="plugins.html">Plug-ins</a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Create the section containing the main content for this page -->
+    <main>
+        <!-- Create title for the Plug-ins page -->
+        <h3 class="title">Plug-ins</h3>
+
+        <!-- 
+            Create the <div> containing the content for Lightbox plugin.
+            Lightbox is a jQuery plugin that allows you to display images and other media in a modal window or overlay that dims the surrounding content.
+            In this webpage, I will use Lightbox plugin to create a gallery displaying my personal works.
+        -->
+        <div id="gallery">
+            <!-- Create an unordered list to contain the gallery items -->
+            <ul>
+                <!-- Create content for gallery item 1 -->
+                <li class="gallery-items" id="moon-maze">
+                    <!-- Add image for gallery item 1, with caption "Maze and Moon" -->
+                    <a href="img/moon_maze.jpg" data-lightbox="gallery" data-title="Maze and Moon">
+                        <img src="img/moon_maze.jpg">
+                    </a>
+                    <div class="overlay-text" id="overlay-text-1">
+                        <h5>"Maze and Moon"</h5>
+                        <div>
+                            <button>Adobe Illustrator</button>
+                        </div>
+                        <p>My life struggles inspired this digital painting. It embodies the idea that beauty often emerges from moments of getting lost.</p>
+                    </div>
+                </li>
+                <!-- Create content for gallery item 2 -->
+                <li class="gallery-items" id="rolex">                 
+                    <!-- Add image for gallery item 2, with caption "Rolex" -->
+                    <a href="img/rolex.jpg" data-lightbox="gallery" data-title="Rolex">
+                        <img src="img/rolex.jpg">
+                    </a>
+                    <!-- Add an overlay box displaying description for the personal work, which will display when user hover over the image of the specific work, which can increase interactivity -->
+                    <div class="overlay-text" id="overlay-text-2">
+                        <h5>"Rolex"</h5>
+                        <div>
+                            <button>Adobe Illustrator</button>
+                        </div>
+                        <p>The design is inspired by the fleeting nature of time and the need for a constant reminder.</p>
+                    </div>
+                </li>
+                <!-- Create content for gallery item 3 -->
+                <li class="gallery-items" id="sirloin-society">
+                    <!-- Add image for gallery item 3, with caption "Sirloin Society" -->
+                    <a href="img/sirloin_society.png" data-lightbox="gallery" data-title="Sirloin Society">
+                        <img src="img/sirloin_society.png">
+                    </a>
+                    <!-- Add an overlay box displaying description for the personal work, which will display when user hover over the image of the specific work, which can increase interactivity -->
+                    <div class="overlay-text" id="overlay-text-3">
+                        <h5>"Sirloin Society"</h5>
+                        <div>
+                            <button>HTML</button>
+                            <button>CSS</button>
+                            <button>JavaScript</button>
+                            <button>Figma</button>
+                        </div>
+                        <p>The design embodies the essence of a premium steakhouse experience, leaving customers craving for more.</p>
+                    </div>
+                </li>
+                <!-- Create content for gallery item 4 -->
+                <li class="gallery-items" id="techwave">
+                    <!-- Add image for gallery item 4, with caption "TechWave" -->
+                    <a href="img/techwave.jpg" data-lightbox="gallery" data-title="TechWave">
+                        <img src="img/techwave.jpg">
+                    </a>
+                    <!-- Add an overlay box displaying description for the personal work, which will display when user hover over the image of the specific work, which can increase interactivity -->
+                    <div class="overlay-text" id="overlay-text-4">
+                        <h5>"TechWave"</h5>
+                        <div>
+                            <button>Adobe InDesign</button>
+                            <button>Adobe Photoshop</button>
+                        </div>
+                        <p>Design inspired by 4th Industrial Revolution - disruptive innovations like AI, blockchain, cloud computing, big data. </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+
+    <!-- 
+        Add jQuery by linking to CDN from online source
+        Source: https://jquery.com/
+    -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <!-- 
+        Add Lightbox JavaScript file by linking to CDN from online source
+        Source: https://lokeshdhakar.com/projects/lightbox2/
+    -->   
+    <script src="js/lightbox.js"></script>
+
+    <script>
+        //Call the option() method to change the default options to fit the website style and functionality
+        lightbox.option({
+            // Set the time it takes for the Lightbox container to animate its width and height when transition between different size images in 500ms
+            'resizeDuration': 500,
+            // Set the time it takes for the Lightbox container and overlay to fade in and out in 500ms
+            'fadeDuration': 500,
+            // Resize images that would extend outside of the viewport to make them fitting neatly inside of it
+            'fitImagesInViewport': true,
+            // Set the time it takes for the image to fade in once loaded in 500ms
+            'imageFadeDuration': 500,
+            // Set the distance from top of viewport that the Lightbox container will appear in 30 pixels
+            'positionFromTop': 30,
+            // Set the time it takes for the Lightbox container to animate its width and height when transition between different size images in 500ms
+            'resizeDuration': 500,
+            // Hide the text indicating the current image number and the total number of images in set
+            'showImageNumberLabel': false,
+        })
+    </script>
+
+</body>
+</html>

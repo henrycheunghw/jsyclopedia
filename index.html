@@ -1,0 +1,153 @@
+<!-- Student Name: Hoi Wing Henry Cheung
+Student Number: A01313771
+Course Number: MDIA 2294 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Set the website title as "JScyclopedia" -->
+    <title>JSyclopedia</title>
+    <!-- Add Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <!-- Add reset CSS stylesheet to remove or reset the default styles applied by web browsers to HTML elements -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Add main CSS stylesheet to set up most of the styling for the webpage -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- 
+        Add Slick CSS file to the <head>
+        Source: https://kenwheeler.github.io/slick/
+    -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <!-- 
+        Add the Slick theme CSS file to import the default styling, but I have made changes inside the file to make the styling matching with my website 
+        Source: https://kenwheeler.github.io/slick/
+    -->
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+
+</head>
+<body>
+
+    <!-- Create the header which will be displayed on all 3 pages -->
+    <header id="site-header">
+        <!-- Use a container to contain the header content -->
+        <div class="container">
+            <div class="flex">
+                <!-- Create a logo-->
+                <div class="site-header__logo">
+                    <!-- Use CSS to increase the font size of "JS" to emphasize that the website name means "encyclopedia of JavaScript" -->
+                    <h2><span class="large-font">JS</span>yclopedia</h2>
+                </div>
+                <!-- Create the navigation menu linking 3 pages together -->
+                <nav class="site-header__menu js-menu">
+                    <ul class="">
+                        <div class="flex">
+                            <!-- Create the the JavaScript Concepts page -->
+                            <li><a href="index.html">JavaScript</a></li>
+                            <!-- Create the jQuery Concepts page -->
+                            <li><a href="jquery.html">jQuery</a></li>
+                            <!-- Create the Plug-ins page -->
+                            <li><a href="plugins.html">Plug-ins</a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Create the section containing the main content for this page -->
+    <main>
+        <!-- Create title for the JavaScript Concepts page -->
+        <h4 class="title">JavaScript Concepts</h4>
+
+        <!-- 
+            Create the <div> containing the content for Slick plugin.
+            Slick is a responsive jQuery carousel plugin that allows developers to create a carousel-style slideshow with customizable options and features such as arrows, dots, and autoplay.
+            In this webpage, I will use Slick plugin to display 1 JavaScript concept each time.
+        -->
+        <div class="slider">
+            <!-- Create content for slider item 1 -->
+            <div class="slider-items">
+                <h3>Variables</h3>
+                <p>Variables are used to store values or data. There are several types of variables, including var, let, and const. The var keyword was traditionally used to declare variables, but let and const were introduced in ES6 to provide block-level scoping. let and const work similarly, but const is used for values that are not expected to change. A variable declaration involves giving the variable a name and, optionally, assigning a value to it. The scope of a variable determines where it can be accessed from within the code.</p>
+                <div class="code">
+                    <h6>Example</h6>
+                    <p>//Code</p>
+                    <p>let x = "JavaScript ";</p>
+                    <p>const y = "is ";</p>
+                    <p>var z = "so much fun!";</p>
+                    <p>console.log(x + y + z)</p>
+                    <p>//Result</p>
+                    <p>JavaScript is so much fun!</p>
+                </div>
+            </div>
+
+            <!-- Create content for slider item 2 -->
+            <div class="slider-items">
+                <h3>Functions</h3>
+                <p>A function is a block of code that performs a specific task. Functions are useful because they allow code to be reused and organized in a more readable way. Functions can be declared with the function keyword and can take parameters, which are placeholders for values that will be passed to the function when it is called. Functions can also return a value, which is specified with the return keyword.</p>
+                <div class="code">
+                    <h6>Example</h6>
+                    <p>//Code</p>
+                    <p>function love(name) {</p>
+                    <p>    console.log("I love " + name + " so much!");</p>
+                    <p>}</p>
+                    <p>love(JavaScript);</p>
+                    <p>//Result</p>
+                    <p>I love JavaScript so much!</p>
+                </div>
+            </div>
+
+            <!-- Create content for slider item 3 -->
+            <div class="slider-items">
+                <h3>Conditional Structures</h3>
+                <p>Conditional structures are used to make decisions in the code based on certain conditions. The two main conditional statements in JavaScript are if and switch. if statements are used to execute a block of code if a certain condition is true. switch statements are used to execute different blocks of code based on different cases. Conditional statements can also include else if clauses to handle multiple possible conditions. Conditional statements are useful for controlling the flow of the code based on user input or other factors.</p>
+                <div class="code">
+                    <h6>Example</h6>
+                    <p>//Code</p>
+                    <p>let dailyHoursStudyingJS = 10;</p>
+                    <p>if (dailyHoursStudyingJS > 5) {</p>
+                    <p>console.log("I study JavaScript a lot!");</p>
+                    <p>} else {</p>
+                    <p>I need to study JavaScript more!</p>
+                    <p>}</p>
+                    <p>//Result</p>
+                    <p>I study JavaScript a lot!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 
+        Add jQuery by linking to CDN from online source
+        Source: https://jquery.com/
+    -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <!-- 
+        Add Slick JavaScript file by linking to my local file 
+        Source: https://kenwheeler.github.io/slick/
+    -->
+    <script src="js/slick.min.js"></script>
+
+    <script>
+        // Initialize Slick plugin and apply to the html element with class name "slider" using jQuery syntax
+        // Call the slick() method to change the default options to fit the website style and functionality
+        $('.slider').slick({
+            // Set up the default setting here
+            // Enable infinite loop sliding
+            infinite: true,
+            // Set the slide/fade animation speed to 400ms
+            speed: 400,
+            // Set the number of slides to show as 1
+            slidesToShow: 1,
+            // Set the number of slides to scroll as 1
+            slidesToScroll: 1,
+        });
+    </script>
+
+</body>
+</html>
